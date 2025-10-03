@@ -54,6 +54,7 @@ jobs:
       id: build_changelog
       uses: mikepenz/release-changelog-builder-action@v5
       with:
+        mode: "COMMIT"
         token: ${{ secrets.GITHUB_TOKEN }}
         configuration: ".github/changelog-config.json"
         fromTag: ${{ steps.get_previous_tag.outputs.tag }}
